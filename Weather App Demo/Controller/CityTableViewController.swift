@@ -21,6 +21,14 @@ class CityTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    // this function triggers what to do after coming back
+    
+    @IBAction func unwindToCityList(_ unwindSegue: UIStoryboardSegue) {
+        let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
+        self.tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 

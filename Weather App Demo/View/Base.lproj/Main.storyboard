@@ -45,6 +45,7 @@
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addCity:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6r-PN-eUy"/>
+                                    <segue destination="tzZ-wv-0NG" kind="unwind" unwindAction="unwindToCityList:" id="IIx-S7-P7L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,6 +68,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="tzZ-wv-0NG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="225" y="-671"/>
         </scene>

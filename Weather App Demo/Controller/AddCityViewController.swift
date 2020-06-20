@@ -56,7 +56,8 @@ class AddCityViewController: UIViewController {
     
 */
 //------------------------------------------------------------------//
-//    cities
+        cities?.append(cityTextField.text!.capitalized)
+       
 }
 
 }
