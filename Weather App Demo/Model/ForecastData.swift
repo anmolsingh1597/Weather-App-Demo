@@ -8,6 +8,35 @@
 
 import Foundation
 
+var cities: [String]?
+
 class ForecastData {
+    var dateString: String
+    var cityName: String
+    var dayTemp: String
+    var highTemp: String
+    var lowTemp: String
+    var feelTemp: String
+    var hour: String
+    var iconCode: String
     
+    init(city: String, data: JSON) {
+        self.cityName = city
+        self.dayTemp = "\(data["main"]["temp"].intValue)º"
+        self.highTemp = "\(data["main"]["temp_max"].intValue)º"
+        self.lowTemp = "\(data["main"]["temp_min"].intValue)º"
+        self.feelTemp = "\(data["main"]["feels_like"].intValue)º"
+        
+        let date = Date(timeIntervalSince1970: data["dt"].doubleValue)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE, MMM d, yyyy"
+        let hourFormatter = DateFormatter()
+        hourFormatter.dateFormat = "h:mm a"
+        
+        self.dateString = formatter.string(from: date)
+        self.hour = hourFormatter.string(from: date)
+        
+        self.iconCode = data["weather"].arrayValue[0]["icon"].stringValue
+        
+    }
 }

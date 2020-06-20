@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddCityViewController: UIViewController {
 
     @IBOutlet weak var cityTextField: UITextField!
     override func viewDidLoad() {
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
 //MARK: Networking
     @IBAction func addCity(_ sender: UIButton) {
         
+//------------------------------------------------------------------//
+ /*
         // Step 1: create URL
         
         if let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(self.cityTextField.text!.replacingOccurrences(of: " ", with: "%20"))&appid=66fd7e6224d12a2784778054bdbeeb71"){
@@ -50,8 +52,11 @@ class ViewController: UIViewController {
         task.resume()
         }
         
-       
-    }
+
     
+*/
+//------------------------------------------------------------------//
+//    cities
 }
 
+}
